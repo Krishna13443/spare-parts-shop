@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium Sub Motor & Copper Spare Parts Shop — Submersible motors, copper winding wire, capacitors, pump accessories, and more.">
+  <title>SparkMotors — Sub Motor & Copper Spare Parts</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+</head>
+<body>
+  <div id="app">
+    <nav class="navbar" id="navbar">
+      <div class="navbar-brand" onclick="window.router.navigate('/')">
+        <div class="logo">⚙️</div>
+        <span>Spark<span style="color:var(--copper-light)">Motors</span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><button class="nav-link active" data-page="home" id="nav-home">Home</button></li>
+        <li><button class="nav-link" data-page="products" id="nav-products">Products</button></li>
+        <li><button class="nav-link" data-page="cart" id="nav-cart" style="position:relative">
+          🛒 Cart 
+          <span class="cart-badge" id="cart-count" style="display:none">0</span>
+        </button></li>
+        <li><button class="nav-link btn btn-secondary btn-sm" data-page="auth" id="nav-auth" style="margin-left:12px;padding:6px 16px;border-radius:var(--radius-full)">📦 Orders / Track</button></li>
+      </ul>
+    </nav>
+
+    <main class="main-content" id="page-content">
+      <div class="loading-overlay"><div class="loading-spinner"></div></div>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="footer-content">
+        <div style="grid-column: span 1.5">
+          <div class="navbar-brand" style="margin-bottom:12px;cursor:default">
+            <div class="logo">⚙️</div>
+            <span>Spark<span style="color:var(--copper-light)">Motors</span></span>
+          </div>
+          <p style="max-width:350px">Premium Submersible Motor & Copper Spare Parts Shop. Quality products since 2005. Trusted by 2000+ professionals across India.</p>
+        </div>
+        <div>
+          <h4>Shop</h4>
+          <a href="#" onclick="window.router.navigate('/products');return false;">Submersible Motors</a>
+          <a href="#" onclick="window.router.navigate('/products');return false;">Copper Wire</a>
+          <a href="#" onclick="window.router.navigate('/products');return false;">Accessories</a>
+        </div>
+        <div>
+          <h4>My Account</h4>
+          <a href="#" onclick="window.router.navigate('/my-orders');return false;">Track Order</a>
+          <a href="#" onclick="window.router.navigate('/cart');return false;">My Cart</a>
+          <a href="#" onclick="window.router.navigate('/login');return false;">Admin Login</a>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <p>📞 +91 90807 99320</p>
+          <p>📧 support@sparkmotors.com</p>
+          <p>📍 Industrial Area, Phase II</p>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 SparkMotors. All rights reserved. Premium Industrial Spare Parts.</div>
+    </footer>
+
+    <div class="toast-container" id="toast-container"></div>
+  </div>
+
+  <!-- Firebase SDK (Compat Version for ease of integration) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+  <script src="/js/firebase-config.js"></script>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/pages/home.js"></script>
+  <script src="/js/pages/products.js"></script>
+  <script src="/js/pages/productDetail.js"></script>
+  <script src="/js/pages/cart.js"></script>
+  <script src="/js/pages/checkout.js"></script>
+  <script src="/js/pages/auth.js"></script>
+  <script src="/js/pages/orders.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
