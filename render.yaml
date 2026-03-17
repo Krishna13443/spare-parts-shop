@@ -16,4 +16,4 @@ services:
 databases:
   - name: sparkmotors-db
     plan: free
-    postgresqlVersion: "15"
+    ipAllowList: [] # Allow all connections
