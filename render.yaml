@@ -13,7 +13,7 @@ services:
       - key: JWT_SECRET
         generateValue: true
 
-  - type: database
-    name: sparkmotors-db
+databases:
+  - name: sparkmotors-db
     plan: free
-    postgresqlVersion: 15
+    postgresqlVersion: "15"
